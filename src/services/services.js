@@ -7,8 +7,7 @@ const basicFetch = async (endpoint) => {
   return json;
 }
 
-export default {
-  getHomeList: async () => {
+async function getHomeList() {
     return [
       {
         slug: 'originals',
@@ -28,28 +27,29 @@ export default {
       {
         slug: 'action',
         title: 'Action',
-        items: await basicFetch(`/discovver/movie?with_genres=28?api_key=${API_KEY}`) 
+        items: await basicFetch(`/discover/movie?with_genres=28&api_key=${API_KEY}`) 
       },
       {
         slug: 'comedy',
         title: 'Comedy',
-        items: await basicFetch(`/discovver/movie?with_genres=35?api_key=${API_KEY}`)  
+        items: await basicFetch(`/discover/movie?with_genres=35&api_key=${API_KEY}`)  
       },
       {
         slug: 'horror',
         title: 'Horror',
-        items: await basicFetch(`/discovver/movie?with_genres=27?api_key=${API_KEY}`) 
+        items: await basicFetch(`/discover/movie?with_genres=27&api_key=${API_KEY}`) 
       },
       {
         slug: 'romance',
         title: 'Romance',
-        items: await basicFetch(`/discovver/movie?with_genres=10749?api_key=${API_KEY}`) 
+        items: await basicFetch(`/discover/movie?with_genres=10749&api_key=${API_KEY}`) 
       },
       {
         slug: 'documentary',
         title: 'Documentary',
-        items: await basicFetch(`/discovver/movie?with_genres=99?api_key=${API_KEY}`) 
+        items: await basicFetch(`/discover/movie?with_genres=99&api_key=${API_KEY}`) 
       },
     ];
   }
-}
+
+export default getHomeList;
