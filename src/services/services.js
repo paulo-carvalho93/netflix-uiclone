@@ -7,7 +7,7 @@ const basicFetch = async (endpoint) => {
   return json;
 }
 
-async function getHomeList() {
+export async function getHomeList() {
     return [
       {
         slug: 'originals',
@@ -50,6 +50,24 @@ async function getHomeList() {
         items: await basicFetch(`/discover/movie?with_genres=99&api_key=${API_KEY}`) 
       },
     ];
+}
+
+export async function getMovieOrSerieInfo(id, type) {
+  let info = {};
+
+  if (id) {
+    switch(type) {
+      case 'movie':
+        info = await basicFetch(`/movie/${id}?api_key=${API_KEY}`);
+      break;
+      case 'tv':
+        info = await basicFetch(`/movie/${id}?api_key=${API_KEY}`);
+      break;
+      default:
+        info = null;
+      break;
+    }
   }
 
-export default getHomeList;
+  return info;
+}
