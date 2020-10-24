@@ -61,7 +61,7 @@ export async function getMovieOrSerieInfo(id, type) {
         info = await basicFetch(`/movie/${id}?api_key=${API_KEY}`);
       break;
       case 'tv':
-        info = await basicFetch(`/movie/${id}?api_key=${API_KEY}`);
+        info = await basicFetch(`/tv/${id}?api_key=${API_KEY}`);
       break;
       default:
         info = null;
