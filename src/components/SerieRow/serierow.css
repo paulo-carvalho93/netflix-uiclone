@@ -12,7 +12,7 @@
 }
 
 .serieRow-list {
-  width: 1000000px;
+  transition: all ease 0.5s;
 }
 
 .serieRow-item {
@@ -29,4 +29,33 @@
 
 .serieRow-item img:hover {
   transform: scale(1);
+}
+
+.serieRow-left, .serieRow-right {
+  position: aboslute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+
+.serieRow-left {
+  left: 0;
+}
+
+.serieRow-right {
+  right: 0;
+}
+
+.serieRow:hover .serieRow-left .serieRow-right {
+  opacity: 1;
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import SerieRow from './components/SerieRow';
 import FeaturedSerie from './components/FeaturedSerie';
 
@@ -64,6 +65,8 @@ export default function App() {
           />
         ))}
       </section>
+
+      <Footer />
     </div>
   );
 }

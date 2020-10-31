@@ -11,6 +11,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  color:white;
+  text-decoration: none;
+}
+
 .lists {
   margin-top: -150px;
 }
+
