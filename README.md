@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="screenshot" src="./src/assets/netflix_logo.png" width="300px" />
+<p>
 
-## Available Scripts
+<p align="center">	
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/paulo-carvalho93/netflix-uiclone">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/paulo-carvalho93/netflix-uiclone">
+</p>
 
-In the project directory, you can run:
+**Netflix UI Clone** is a mini project that brings information about series from TMDB API using the same main categories from Netflix. 
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The idea of this project is just to boost my abilities with React.js, HTML, and CSS3.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="center">
+  <img alt="screenshot" width="650px" src="./.github/assets/happy.png" />
+<p>
 
-### `yarn test`
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Live Demo
 
-### `yarn build`
+Access:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Netflix - UI Clone](https://netflix-uiclone.vercel.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Summary
 
-### `yarn eject`
+- [Technology](#rocket-technology)
+  - [Web](#computer-web)
+- [How to run](#boom-how-to-run)
+  - [Web](#computer-web-1)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# :rocket: Technology
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<div align="center">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![react](https://img.shields.io/badge/react-61dafb?&logoColor=000&style=for-the-badge&logo=react)![javascript](https://img.shields.io/badge/javascript-f6da3a?&logoColor=FFF&style=for-the-badge&logo=javascript)![tmdb](https://img.shields.io/badge/tmdb-000?&logoColor=FFF&style=for-the-badge&logo=tmdb)
 
-## Learn More
+</div>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :computer: Web
 
-### Code Splitting
+The _web_ version of the application was developed with [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/) using the framework [ReactJS](https://reactjs.org/). The images and the description was made using [Tmdb](https://www.themoviedb.org/) API. Also, the application is fully responsive following the CSS structure.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+# :boom: How to run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- ### **Prerequisites**
 
-### Making a Progressive Web App
+  - It's **necessary** to have **[Node.js](https://nodejs.org/en/)** installed on the computer
+  - It's **necessary** to have **[Git](https://git-scm.com/)** installed and configured on the computer
+  - Also, it's **necessary** to have a package manager either **[NPM](https://www.npmjs.com/)** or **[Yarn](https://yarnpkg.com/)**.
+  
+Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```sh
+  $ git clone https://github.com/paulo-carvalho93/netflix-uiclone.git
+```
 
-### Advanced Configuration
+## TMDB API KEY
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You need a TMDB API KEY to be able to render all images and descriptions.
+Go to https://www.themoviedb.org and create your account.
 
-### Deployment
+After creating your KEY, follow the instructions:
+```
+# Create a new file at project root with the name: 
+$ .env
+# Then, just fill the file with following content:
+$ REACT_APP_TMDB_KEY=YOUR_KEY_HERE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
 
-### `yarn build` fails to minify
+## :computer: Web
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+  # API
+  $ cd netflix-uiclone
+  # Installing project dependencies.
+  $ yarn # or npm install
+  
+  # Start Web Project
+  $ yarn start # or npm start
+  
+  # Do you want to publish ?
+  $ yarn build # or npm build
+  # Static files for web will be saved in the `public` folder
+  
+```
+
+## :memo: Attention
+
+All image rights reserved for Netflix. 
+
+This is just a project for study purposes.
+
+---
