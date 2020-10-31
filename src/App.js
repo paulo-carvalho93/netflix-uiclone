@@ -7,9 +7,9 @@ import FeaturedSerie from './components/FeaturedSerie';
 import { getHomeList, getMovieOrSerieInfo }  from './services/services';
 
 import './App.css';
+import netflixLoading from './assets/netflix_loading.gif';
 
 export default function App() {
-
   const [serieList, setSerieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
@@ -67,6 +67,12 @@ export default function App() {
       </section>
 
       <Footer />
+
+      {serieList.length <= 0 && 
+        <div className="loading">
+          <img src={netflixLoading} alt="Loading"/>
+        </div>
+      }
     </div>
   );
 }
