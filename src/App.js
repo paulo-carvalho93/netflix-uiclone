@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import MovieRow from './components/MovieRow/MovieRow';
-import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie';
+import Header from './components/Header';
+import SerieRow from './components/SerieRow';
+import FeaturedSerie from './components/FeaturedSerie';
 
 import { getHomeList, getMovieOrSerieInfo }  from './services/services';
 
@@ -8,14 +9,15 @@ import './App.css';
 
 export default function App() {
 
-  const [movieList, setMovieList] = useState([]);
+  const [serieList, setSerieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
     // Getting all data
     const loadAll = async () => {
       let list = await getHomeList();
-      setMovieList(list);
+      setSerieList(list);
 
       // Getting featured Movie/Serie
       let originals = list.filter(i => i.slug === 'originals');
@@ -28,16 +30,34 @@ export default function App() {
     loadAll();
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    }
+    window.addEventListener('scroll', scrollListener);
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
   return(
     <div className="page">
+
+      <Header black={blackHeader} />
+
       {featuredData && 
-        <FeaturedMovie 
+        <FeaturedSerie 
           item={featuredData}
         />
       }
       <section className="lists">
-        {movieList.map((item, index) => (
-          <MovieRow 
+        {serieList.map((item, index) => (
+          <SerieRow 
             key={index} 
             title={item.title} 
             items={item.items}

@@ -1,32 +1,32 @@
-.movieRow {
+.serieRow {
   margin-bottom: 30px;
 }
 
-.movieRow h2 {
+.serieRow h2 {
   margin: 0 30px;
 }
 
-.movieRow-listarea {
+.serieRow-listarea {
   overflow-x: hidden;
   padding-left: 30px;
 }
 
-.movieRow-list {
+.serieRow-list {
   width: 1000000px;
 }
 
-.movieRow-item {
+.serieRow-item {
   display: inline-block;
   width: 150px;
   cursor: pointer;
 }
 
-.movieRow-item img {
+.serieRow-item img {
   width: 100%;
   transform: scale(0.9);
   transition: all ease 0.2s;
 }
 
-.movieRow-item img:hover {
+.serieRow-item img:hover {
   transform: scale(1);
 }

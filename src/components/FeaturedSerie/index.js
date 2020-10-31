@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './featuredmovie.css';
+import './featuredserie.css';
 
-function FeaturedMovie({ item }) {
+export default function FeaturedSerie({ item }) {
   let BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/original';
 
   let firstDate = new Date(item.first_air_date);
@@ -16,7 +16,7 @@ function FeaturedMovie({ item }) {
   return (
     <section 
       className="featured" 
-      style={{ 
+      style={{
           backgroundImage: `url(${BASE_IMAGE_URL}${item.backdrop_path})`
       }}
     >
@@ -51,7 +51,5 @@ function FeaturedMovie({ item }) {
       </div>
     </section>
   );
-
 }
 
-export default FeaturedMovie;
