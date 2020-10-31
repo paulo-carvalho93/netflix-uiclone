@@ -60,3 +60,10 @@
 .serieRow:hover .serieRow-right {
   opacity: 1;
 }
+
+@media (max-width: 760px) {
+  .serieRow-left,
+  .serieRow-right {
+    opacity: 1;
+  }
+}
