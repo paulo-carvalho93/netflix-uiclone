@@ -4,7 +4,6 @@ import './serierow.css';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
-
 export default function SerieRow ({ title, items }) {
   const [scrollX, setScrollX] = useState(0);
 
@@ -29,6 +28,8 @@ export default function SerieRow ({ title, items }) {
     <div className="serieRow">
       <h2>{title}</h2>
 
+      <span>{console.log(items)}</span>
+
       <div className="serieRow-left" onClick={handleLeftArrow}>
           <NavigateBeforeIcon style={{ fontSize: 50 }} />
       </div>
@@ -43,7 +44,11 @@ export default function SerieRow ({ title, items }) {
           }}>
           {items.results.length > 0 && items.results.map((item, index) => (
             <div key={index} className="serieRow-item">
-              <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
+              <img 
+                key={index.id} 
+                src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} 
+                alt={item.original_title}
+              />
             </div>
             ))}
         </div>

@@ -12,7 +12,7 @@ export async function getHomeList() {
       {
         slug: 'originals',
         title: 'Netflix Originals',
-        items: await basicFetch(`/discover/tv?with_network=213&api_key=${API_KEY}`)
+        items: await basicFetch(`/discover/tv?with_networks=213&api_key=${API_KEY}`)
       },
       {
         slug: 'trending',

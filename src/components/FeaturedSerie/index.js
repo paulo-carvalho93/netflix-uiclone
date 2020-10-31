@@ -44,8 +44,7 @@ export default function FeaturedSerie({ item }) {
               {description}
             </div>
             <div className="featured-buttons">
-              <a href={`/watch/${item.id}`} className="featured-watch-button">► Watch</a>
-              <a href={`/list/add/${item.id}`} className="featured-mylist-button">+ My List</a>
+              <a href={`${item.homepage}`} className="featured-watch-button">► Watch</a>
             </div>
             <div className="featured-genres">
               <strong>Genres:</strong> {genres.join(', ')}
