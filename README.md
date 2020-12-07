@@ -15,19 +15,19 @@
 The idea of this project is just to boost my abilities with React.js, HTML, and CSS3.
 
 <p align="center">
-  <img alt="screenshot" width="650px" src="./.github/assets/happy.png" />
+  <img alt="screenshot" width="650px" src="./.github/assets/netflix_clone.png" />
 <p>
 
 </div>
 
-# Live Demo
+## Live Demo
 
 Access:
 
 [Netflix - UI Clone](https://netflix-uiclone.vercel.app/)
 
 
-# Summary
+## Summary
 
 - [Technology](#rocket-technology)
   - [Web](#computer-web)
@@ -35,7 +35,7 @@ Access:
   - [Web](#computer-web-1)
 
 
-# :rocket: Technology
+## :rocket: Technology
 
 <div align="center">
 
